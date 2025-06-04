@@ -1,9 +1,9 @@
-const fragmento = document.createDocumentFragment();
-const template = document.createElement("template");
+const userCardFragment = document.createDocumentFragment();
+const userCardTemplate = document.createElement("template");
 
 const loadUser = (data) => {
   try {
-    template.innerHTML = `
+    userCardTemplate.innerHTML = `
       <div class="profile">
         <div class="container">  
           <div class="background-image">
@@ -22,12 +22,12 @@ const loadUser = (data) => {
         </div>
       </div>
     `;
-    const cloneTemplate = template.content.cloneNode(true);
-    fragmento.appendChild(cloneTemplate);
-    const app = document.getElementById("app");
-    app.appendChild(fragmento);
+    const clonedCard = userCardTemplate.content.cloneNode(true);
+    userCardFragment.appendChild(clonedCard);
+    const appContainer = document.getElementById("app");
+    appContainer.appendChild(userCardFragment);
   } catch (error) {
-    console.log("There was an error: ", error);
+    console.error("There was an error loading the user card:", error);
   }
 };
 
