@@ -26,6 +26,8 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2); 
 }
 .container{
     height: 580px;
@@ -89,10 +91,6 @@ body{
   border: 2px solid #008CBA;
 }
 
-.reload-button :hover {
-  background-color: #008CBA;
-  color: white;
-}
 .reload-button:hover {
   background-color: #008CBA; /* Green */
   color: white;
