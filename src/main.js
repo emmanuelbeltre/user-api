@@ -5,10 +5,8 @@ const app = document.getElementById("app");
 
 
 ApiRequest.apiRequest(app).then(data => {
-  if(data) User.loadUser(data);
+  if (data) User.loadUser(data);
 });
-
-User.loadUser()
 
 
 
